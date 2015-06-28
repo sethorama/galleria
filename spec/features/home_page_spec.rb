@@ -5,4 +5,10 @@ describe "Visiting Home Page" do
     visit '/'
     expect(page).to have_content('Register')
   end
+
+  it "Takes user to register page when clicking link" do
+    visit '/'
+    click_link 'Register'
+    expect(page).to have_content('Username')
+  end
 end
